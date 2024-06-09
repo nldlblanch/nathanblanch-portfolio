@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    box-sizing: 0;
+    padding: 0;
+}
+
+html {
+    margin: 75px;
+    position: absolute;
+    border: 1px solid black;
+    height: calc(100% - 150px);
+    width: calc(100% - 150px);
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+.navbar {
+    margin: 25px;
+}
+.navbar a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+.closed {
+    color: red;
+}
+
+
+#projects li {
+    list-style-type: none;
+    
+}
+
+#projects {
+    
+}
+.opened {
+    color: green;
+    
+}
+#projects ul {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    
+}
+
+/* font sizes */
+/* sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1400px */
+
+
+@media only screen and (min-width: 576px) {
+    /* For mobile phones: */
+    body {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* med */
+    body {
+        font-size: 3em;
+    }
+}
+@media only screen and (min-width: 992px) {
+    /* large */
+    body {
+        font-size: 4em;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    /* x large */
+    body {
+        font-size: 5em;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    /* xx large */
+    body {
+        font-size: 6em;
+    }
+}
