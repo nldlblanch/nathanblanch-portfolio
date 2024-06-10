@@ -72,7 +72,7 @@ main {
     width: 11rem;
     top: 13.05rem;
 }
-#nav-about .navTextReplacer {
+#aboutNavReplacer {
     width: 14.4rem;
     top: 19rem;
 }
@@ -90,8 +90,11 @@ main {
 .fadeIn {
     animation: fadeIn 1s ease-in-out forwards;
 }
-.animationSlow {
+/* .slow-animation {
     animation-duration: 2s;
+} */
+.delay {
+    animation-delay: 1s;
 }
 
 /* end navbar ------------------------------------------------------------------------------------------------ */

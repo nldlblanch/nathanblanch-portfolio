@@ -12,9 +12,8 @@ const contactNavReplacer = document.getElementById('contactNavReplacer')
 
 let projectsOpen = false;
 let aboutOpen = false;
-// let aboutNavReplacer = false;
-// let projectsNavReplacer = false;
-// let contactNavReplacer = false;
+//remove slow startup animation
+navHome.classList.remove('slow-animation')
 
 const closeProjects = () => {
     projects.forEach((project) => {project.classList.replace("opened", "closed")})
@@ -24,6 +23,8 @@ const closeProjects = () => {
 const closeAbout = () => {
     about.classList.replace('aboutOpen', 'aboutClose')
     aboutOpen = false;
+    navAbout.classList.replace('fadeOut', 'fadeIn')
+    aboutNavReplacer.classList.replace('fadeIn', 'fadeOut')
 }
 
 navHome.addEventListener("click", () => {
