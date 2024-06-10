@@ -10,14 +10,17 @@
 
 </head>
 <body>
-    <div id="page-frame-style">
+    <div class="horizontal frame top"></div>
+    <div class="horizontal frame bottom"></div>
+    <div class="vertical frame left"></div>
+    <div class="vertical frame right"></div>
     <main>
         <aside class="navbar">
             <nav>
-                <a name="nav-home" id="nav-home" href="#home">Home</a>
-                <a name="nav-about" id="nav-about" href="#about">About</a>
-                <a name="nav-projects" id="nav-projects" href="#projects">Projects</a>
-                <a name="nav-contact" id="nav-contact" href="contact">Contact</a>
+                <a name="nav-home" id="nav-home" class="fadeIn animationSlow" href="#home">Home<div id="homeNavReplacer" class="navTextReplacer initiallyHidden"></div></a>
+                <a name="nav-about" id="nav-about" class="fadeIn animationSlow" href="#about">About<div id="aboutNavReplacer" class="navTextReplacer initiallyHidden replacerHidden"></div></a>
+                <a name="nav-projects" id="nav-projects" class="fadeIn animationSlow" href="#projects">Projects<div id="projectsNavReplacer" class="navTextReplacer initiallyHidden"></div></a>
+                <a name="nav-contact" id="nav-contact" class="fadeIn animationSlow" href="contact">Contact<div id="contactNavReplacer" class="navTextReplacer initiallyHidden"></div></a>
             </nav>
         </aside>
         <section id="projects">
@@ -29,25 +32,13 @@
                 <li class="project closed">
                     Project 3
                 </li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
-                <li class="project closed">Project 1</li>
             </ul>
         </section>
+        <section id="about" class="initiallyHidden aboutClose">
+            <p>This is the about section and this is what the text looks like</p>
+        </section>
     </main>
-</div>
+
 <script src="./script.js"></script>
 
 </body>
