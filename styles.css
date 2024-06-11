@@ -15,7 +15,7 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-}
+} 
 main {
     border: 3px solid black;
     box-shadow: 5px 5px 5px black;
@@ -28,23 +28,21 @@ main {
 }
 .initiallyHidden {
     opacity: 0 !important;
-}
+} */
 
 /* styles for page frame ---------------------  */
 .horizontal.frame {
-    /* background: blue; */
     width: 100%;
     height: 7.5rem; 
 }
 .vertical.frame {
-    /* background: red; */
     width: 7.5rem;
     height: 100%;
 }
 .frame {
     position: fixed;
     z-index: 999;
-    /* background: white; */
+    
 }
 .frame.bottom {
     bottom: 0;
@@ -74,7 +72,7 @@ main {
 }
 .slowFadeIn {
     animation: fadeIn 2s ease-in-out forwards;
-}
+} *
 
 
 /* end navbar ------------------------------------------------------------------------------------------------ */
@@ -108,7 +106,7 @@ main {
 
 /* about section ----------------------------------------------------------------- */
 
-.aboutOpen {
+/* .aboutOpen {
     animation: fadeIn 1s ease-in-out forwards;
 }
 .aboutClose {
@@ -121,7 +119,7 @@ main {
     right: 7.5rem;
     bottom: 7.5rem;
     margin: 0 1rem 1rem 0;
-}
+} */
 
 /* end about section ----------------------------------------------------------------- */
 
@@ -242,27 +240,86 @@ main {
   /* media queries ------------------------------------------------------------------------------------------------ */
 @media only screen and (min-width: 320px) {
     /* For mobile phones, 320-480: */
+    html {
+        height: 100vh;
+        width: 100vw;
+    }
+    body {
+        height: 100%;
+        width: 100%;
+    }
     main {
         margin: 25px;
         height: calc(100% - 56px);
         width: calc(100% - 56px);
+        border: 3px solid black;
+        box-shadow: 5px 5px 5px black;
+        /* display: flex;
+        justify-content: space-between; */
+    }
+    .mobileHidden {
+        display: none;
+    }
+    .mobileOpen {
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+    .mobileFadeOut {
+        animation: fadeOut 1s ease-in-out forwards;
+    }
+    #about {
+        height: calc(100% - 56px - 2rem);
+        width: calc(100% - 56px - 2rem);
+        font-size: 3rem;
+        text-align: center;
+        margin: 1rem;
+        position: absolute;
+    }
+    #about p {
+        position: absolute;
+        bottom: 0;
+        text-align: right;
     }
     aside {
-        font-size: 2rem;
+        font-size: 5rem;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
     }
-    #projectContainer {
-        margin-right: 2rem;
+    .navbar {
+        margin: 0;
     }
+    .navbar a {
+        display: initial;
+    }
+   
     .horizontal.frame {
-        /* background: blue; */
+        
         width: 100%;
         height: 2.5rem; 
     }
     .vertical.frame {
-        /* background: red; */
+        
         width: 2.5rem;
         height: 100%;
     }
+
+
+    /* projects */
+
+    #projects li {
+        list-style-type: none;
+    }
+    #projects ul {
+        height: 100%;
+    }
+    #projectContainer {
+        overflow-x: hidden;
+        margin-right: 2rem;
+    }
+    /* end of projects */
 }
 
 @media only screen and (min-width: 481px) {

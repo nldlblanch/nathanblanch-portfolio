@@ -1,3 +1,4 @@
+const navbar = document.getElementById('navbar')
 const navHome = document.getElementById("nav-home")
 const navAbout = document.getElementById("nav-about")
 const navProjects = document.getElementById("nav-projects")
@@ -7,7 +8,7 @@ const projectContainer = document.getElementById('projectContainer')
 const about = document.getElementById('about')
 const contact = document.getElementById('contact-me')
 
-let glitchIntensity = 1;
+// let glitchIntensity = 1; idea for later
 let projectsOpen = false;
 let aboutOpen = false;
 let contactOpen = false;
@@ -29,6 +30,15 @@ const closeContact = () => {
     navContact.classList.remove('glitch')
 }
 
+const openAbout = () => {
+    aboutOpen = true;
+    about.classList.remove('initiallyHidden')
+    about.classList.replace('aboutClose', 'aboutOpen')
+    navAbout.classList.add('glitch')
+    about.classList.replace('mobileHidden', 'mobileOpen')
+    navbar.classList.add('mobileFadeOut')
+}
+
 navHome.addEventListener("click", () => {
     //if projects are open, close them
     closeProjects()
@@ -42,12 +52,7 @@ navAbout.addEventListener("click", () => {
     //close projects if open
     closeProjects()
     closeContact()
-    about.classList.remove('initiallyHidden')
-    about.classList.replace('aboutClose', 'aboutOpen')
-    aboutOpen = true;
-    navAbout.classList.add('glitch')
-    
-    
+    openAbout()   
 })
 //when you click projects
 navProjects.addEventListener("click", () => {

@@ -12,7 +12,7 @@
         <div class="vertical frame left"></div>
         <div class="vertical frame right"></div>
         <main>
-            <aside class="navbar slowFadeIn">
+            <aside id="navbar" class="navbar slowFadeIn">
                 <nav>
                     <a title="Home" name="nav-home" id="nav-home" class="" href="#home">Home</a>
                     <a title="About" name="nav-about" id="nav-about" class="" href="#about">About</a>
@@ -20,17 +20,18 @@
                     <a title="Contact" name="nav-contact" id="nav-contact" class="" href="#contact-me">Contact</a>
                 </nav>
             </aside>
-            <section id="projects">
+            <section id="projects" class="mobileHidden">
                 <ul id="projectContainer" class="initiallyHidden hideScroll">
                     <li class="project closed">Project 1</li>
                     <li class="project closed">Project 2</li>
                     <li class="project closed">Project 3</li>
                 </ul>
             </section>
-            <section id="about" class="initiallyHidden aboutClose">
+            <section id="about" class="initiallyHidden aboutClose mobileHidden">
+                <a title="Home" class="returnButton glitch" href="#home">Home</a>
                 <p>This is the about section and this is what the text looks like</p>
             </section>
-            <section id="contact-me" class="initiallyHidden contactClose"></section>
+            <section id="contact-me" class="initiallyHidden contactClose mobileHidden"></section>
         </main>
         <script src="./script.js"></script>
     </body>
