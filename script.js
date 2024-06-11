@@ -5,59 +5,66 @@ const navContact = document.getElementById("nav-contact")
 const projects = document.querySelectorAll('.project')
 const projectContainer = document.getElementById('projectContainer')
 const about = document.getElementById('about')
-const aboutNavReplacer = document.getElementById('aboutNavReplacer')
-const projectsNavReplacer = document.getElementById('projectsNavReplacer')
-const contactNavReplacer = document.getElementById('contactNavReplacer')
+const contact = document.getElementById('contact-me')
 
-
+let glitchIntensity = 1;
 let projectsOpen = false;
 let aboutOpen = false;
-//remove slow startup animation
-navHome.classList.remove('slow-animation')
+let contactOpen = false;
 
 const closeProjects = () => {
     projects.forEach((project) => {project.classList.replace("opened", "closed")})
     projectContainer.classList.replace('showScroll', 'hideScroll')
     projectsOpen = false;
+    navProjects.classList.remove('glitch')
 }
 const closeAbout = () => {
     about.classList.replace('aboutOpen', 'aboutClose')
     aboutOpen = false;
-    navAbout.classList.replace('fadeOut', 'fadeIn')
-    aboutNavReplacer.classList.replace('fadeIn', 'fadeOut')
+    navAbout.classList.remove('glitch')
+}
+const closeContact = () => {
+    contact.classList.replace('contactOpen', 'contactClose')
+    contactOpen = false;
+    navContact.classList.remove('glitch')
 }
 
 navHome.addEventListener("click", () => {
     //if projects are open, close them
-    if (projectsOpen === true) closeProjects()
-    if (aboutOpen === true) closeAbout()
+    closeProjects()
+    closeAbout()
+    closeContact()
+    
 })
 
 //WHEN YOU CLICK ABOUT
 navAbout.addEventListener("click", () => {
     //close projects if open
-    if (projectsOpen === true) closeProjects()
+    closeProjects()
+    closeContact()
     about.classList.remove('initiallyHidden')
     about.classList.replace('aboutClose', 'aboutOpen')
     aboutOpen = true;
-    //remove initial hidden div and replace class list
-    aboutNavReplacer.classList.remove('initiallyHidden')
-    navAbout.classList.replace('fadeIn', 'fadeOut')
-    aboutNavReplacer.classList.replace('fadeOut', 'fadeIn')
+    navAbout.classList.add('glitch')
+    
     
 })
-
+//when you click projects
 navProjects.addEventListener("click", () => {
     projects.forEach((project) => {project.classList.replace("closed", "opened")})
     projectContainer.classList.replace('hideScroll', 'showScroll')
     projectContainer.classList.remove('initiallyHidden')
-    if (aboutOpen === true) closeAbout()
+    closeAbout()
+    closeContact()
     projectsOpen = true;
+    navProjects.classList.add('glitch')
 
 })
-
+//when you click contact
 navContact.addEventListener("click", () => {
     //if projects are open, close them
-    if (projectsOpen === true) closeProjects()
-    if (aboutOpen === true) closeAbout()
+    closeProjects()
+    closeAbout()
+    contactOpen = true
+    navContact.classList.add('glitch')
 })
