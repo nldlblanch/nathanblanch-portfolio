@@ -19,9 +19,9 @@ body {
 main {
     border: 3px solid black;
     box-shadow: 5px 5px 5px black;
-    height: calc(100% - 156px);
-    width: calc(100% - 156px);
-    margin: 75px;
+    height: calc(100% - 15rem - 6px);
+    width: calc(100% - 15rem - 6px);
+    margin: 7.5rem;
     display: flex;
     justify-content: space-between;
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
@@ -34,11 +34,11 @@ main {
 .horizontal.frame {
     /* background: blue; */
     width: 100%;
-    height: 75px; 
+    height: 7.5rem; 
 }
 .vertical.frame {
     /* background: red; */
-    width: 75px;
+    width: 7.5rem;
     height: 100%;
 }
 .frame {
@@ -57,7 +57,7 @@ main {
 
 /* navbar ------------------------------------------------------------------------------------------------ */
 .navbar {
-    margin: 25px;
+    margin: 2.5rem;
 }
 .navbar a {
     display: flex;
@@ -65,26 +65,7 @@ main {
     text-decoration: none;
     color: black;
 }
-.navTextReplacer {
-    border: 2px solid black;
-    position: absolute;
-}
-#nav-home .navTextReplacer {
-    width: 11rem;
-    top: 13.05rem;
-}
-#aboutNavReplacer {
-    width: 14.4rem;
-    top: 19rem;
-}
-#nav-projects .navTextReplacer {
-    width: 23.3rem;
-    top: 24.5rem;
-}
-#nav-contact .navTextReplacer {
-    width: 20.4rem;
-    top: 30.1rem;
-}
+
 .fadeOut {
     animation: fadeOut 1s ease-in-out forwards;
 }
@@ -109,7 +90,7 @@ main {
 }
 #projectContainer {
     overflow-x: hidden;
-    margin-right: 50px;
+    margin-right: 5rem;
 }
 .hideScroll {
     animation: hideScroll 1s forwards;
@@ -135,54 +116,23 @@ main {
 }
 #about {
     position: absolute;
-    max-height: calc(50% - 75px);
-    max-width: calc(50% - 75px);
-    right: 75px;
-    bottom: 75px;
+    max-height: calc(50% - 7.5rem);
+    max-width: calc(50% - 7.5rem);
+    right: 7.5rem;
+    bottom: 7.5rem;
     margin: 0 1rem 1rem 0;
 }
 
 /* end about section ----------------------------------------------------------------- */
 
 
-/* media queries ------------------------------------------------------------------------------------------------ */
-@media only screen and (min-width: 576px) {
-    /* For mobile phones: */
-    
-    
-}
 
-@media only screen and (min-width: 768px) {
-    /* med */
-    body {
-        font-size: 3em;
-    }
-}
-@media only screen and (min-width: 992px) {
-    /* large */
-    body {
-        font-size: 4em;
-    }
-}
-@media only screen and (min-width: 1200px) {
-    /* x large */
-    body {
-        font-size: 5em;
-    }
-}
-@media only screen and (min-width: 1400px) {
-    /* xx large */
-    body {
-        font-size: 6em;
-    }
-}
-/* end media queries ------------------------------------------------------------------------------------------------ */
 
 
 /* animations ------------------------------------------------------------------------------------------------ */
 @keyframes slideLeft {
     from {
-        transform: translateX(300px);
+        transform: translateX(30rem);
         opacity: 0;
     } 
     to {
@@ -196,7 +146,7 @@ main {
         opacity: 100;
     } 
     to {
-        transform: translateX(300px);
+        transform: translateX(30rem);
         opacity: 0;
     }
 }
@@ -288,3 +238,55 @@ main {
       transform: translate(-22px,5px) skew(21deg); 
     }
   }
+
+  /* media queries ------------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 320px) {
+    /* For mobile phones, 320-480: */
+    main {
+        margin: 25px;
+        height: calc(100% - 56px);
+        width: calc(100% - 56px);
+    }
+    aside {
+        font-size: 2rem;
+    }
+    #projectContainer {
+        margin-right: 2rem;
+    }
+    .horizontal.frame {
+        /* background: blue; */
+        width: 100%;
+        height: 2.5rem; 
+    }
+    .vertical.frame {
+        /* background: red; */
+        width: 2.5rem;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    /* 481px — 768px: iPads, Tablets */
+    body {
+        font-size: 3em;
+    }
+}
+@media only screen and (min-width: 769px) {
+    /* 769px — 1024px: Small screens, laptops */
+    body {
+        font-size: 4em;
+    }
+}
+@media only screen and (min-width: 1025px) {
+    /* 1025px — 1200px: Desktops, large screens */
+    body {
+        font-size: 5em;
+    }
+}
+@media only screen and (min-width: 1201px) {
+    /* 1201px and more —  Extra large screens, TV */
+    body {
+        font-size: 6em;
+    }
+}
+/* end media queries ------------------------------------------------------------------------------------------------ */
